@@ -27,7 +27,7 @@ class WebViewExample extends StatelessWidget {
       // to allow calling Scaffold.of(context) so we can show a snackbar.
       body: Builder(builder: (BuildContext context) {
         return WebView(
-          initialUrl: 'https://flutter.io',
+          initialUrl: 'https://www.readingiq.com',
           javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: (WebViewController webViewController) {
             _controller.complete(webViewController);
@@ -122,8 +122,8 @@ class SampleMenu extends StatelessWidget {
       WebViewController controller, BuildContext context) async {
     // Send a message with the user agent string to the Toaster JavaScript channel we registered
     // with the WebView.
-    controller.evaluateJavascript(
-        'Toaster.postMessage("User Agent: " + navigator.userAgent);');
+    //controller.evaluateJavascript(
+    //    'Toaster.postMessage("User Agent: " + navigator.userAgent);');
   }
 }
 
