@@ -175,6 +175,9 @@ public class FlutterWebView implements PlatformView, MethodCallHandler {
         break;
       case 1: // unrestricted
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setMinimumFontSize(1);
+        webView.getSettings().setDomStorageEnabled(true);
+        WebView.setWebContentsDebuggingEnabled(true);
         break;
       default:
         throw new IllegalArgumentException("Trying to set unknown JavaScript mode: " + mode);
